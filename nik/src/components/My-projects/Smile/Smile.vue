@@ -1,37 +1,40 @@
 <template>
-
+ 
   <v-card>
-    <v-card-title>
-      <v-spacer />
-      <v-text-field
-        v-model="search"
-        label="Search"
-        single-line
-        hide-details
-        append-icon="mdi-magnify"
-        @click:append="searchV(search)"
-      >
-      </v-text-field>
-    </v-card-title>
-    <div class="table">
-      <v-simple-table dense>
-        <tbody>
-          <tr v-for="(task, index) in filteredList" :key="task.id">
-            <td :class="{ active: index === active }">{{ task.category }}</td>
-            <td :class="{ active: index === active }">{{ task.delivery }}</td>
-            <td :class="{ active: index === active }">{{ task.setup }}</td>
-            <td :class="{ active: index === active }">
-              <v-icon
-                @click="push_local(task.delivery), (active = index)"
-                
-                >mdi-thumb-up</v-icon
-              >
-            </td>
-          </tr>
-        </tbody>
-      </v-simple-table>
-    </div>
+   
+      <v-card-title>
+        <v-btn style="margin-top: 16px" @click="Del">Clear LocalStorage</v-btn>
+        <v-spacer />
+        <v-text-field
+          v-model="search"
+          label="Search"
+          single-line
+          hide-details
+          append-icon="mdi-magnify"
+          @click:append="searchV(search)"
+        >
+        </v-text-field>
+      </v-card-title>
+      <div class="table">
+        <v-simple-table  dense>
+          <tbody>
+            <tr v-for="(task, index) in filteredList" :key="task.id">
+              <td :class="{ active: index === active }">{{ task.category }}</td>
+              <td :class="{ active: index === active }">{{ task.delivery }}</td>
+              <td :class="{ active: index === active }">{{ task.setup }}</td>
+              <td :class="{ active: index === active }">
+                <v-icon @click="push_local(task.delivery), (active = index)"
+                  >mdi-thumb-up</v-icon
+                >
+              </td>
+            </tr>
+          </tbody>
+        </v-simple-table>
+        
+      </div>
+    
   </v-card>
+
 </template>
 
 <script>
@@ -51,12 +54,12 @@ export default {
     this.GET_SMILE_FROM_API();
   },
   computed: {
-    ...mapGetters(["smile", "searchValue"]),
+    ...mapGetters(["smile", "searchValue_smile"]),
     filteredList() {
       // фильтр поиска по категории
       var comp = this.search;
       if (this.search) {
-        return this.smile.jokes.filter(function(elem) {
+        return this.smile.jokes.filter(function (elem) {
           if (comp === "") return true;
           else
             return elem.category.toLowerCase().indexOf(comp.toLowerCase()) > -1;
@@ -67,14 +70,18 @@ export default {
     },
   },
   methods: {
-    ...mapActions(["GET_SMILE_FROM_API", "GET_SEARCH_VALUE"]),
+    ...mapActions(["GET_SMILE_FROM_API", "GET_SEARCH_VALUE_SMILE", "DELETE"]),
     push_local(value, index) {
       // добавление в локал хранилище
       this.$store.dispatch("LOCAL", value);
     },
     searchV(value) {
       // для добавление в vuex данные поиска
-      this.GET_SEARCH_VALUE(value);
+      this.GET_SEARCH_VALUE_SMILE(value);
+    },
+    Del() {
+      // очистим хранилище на кнопку
+      this.DELETE();
     },
   },
 };
@@ -86,7 +93,7 @@ export default {
   margin: 20px;
   border: 1px solid;
   box-shadow: 0 0 8px 0;
-  width: 0 auto;
+  width: auto;
   border-radius: 10px;
 }
 .active {

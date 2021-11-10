@@ -1,7 +1,5 @@
 <template>
-
     <navigation />
-
 </template>
 
 <script>

@@ -1,11 +1,22 @@
 <template>
-  <v-menu offset-x rounded v-if="this.bool == true">
+  <v-menu
+    v-if="this.bool == true"
+    absolute
+    offset-x
+    rounded
+  >
     <template v-slot:activator="{ on, attrs }">
       <v-list-item-title v-bind="attrs" v-on="on">My project</v-list-item-title>
     </template>
-    <v-list>
-      <v-list-item link v-for="(i, index) in item" :key="index">
-        <v-list-item-title @click.prevent="$router.push(i.routing).catch(()=>{})">
+    <v-list >
+      <v-list-item
+        v-for="(i, index) in item"
+        :key="index"
+        link
+      >
+       <v-list-item-title
+          @click.prevent="$router.push(i.routing).catch(()=>{})"
+        >
           {{ i.title }}
         </v-list-item-title>
       </v-list-item>
@@ -21,9 +32,9 @@ export default {
       bool: this.boolean,
       item: [
         { title: "1", routing: "/My_project_1" },
-        { title: "2" },
-        { title: "3" },
-        { title: "4" },
+        { title: "2", routing: "/My_project_2"  },
+        { title: "3", routing: "/My_project_1"  },
+        { title: "4", routing: "/My_project_1"  },
       ],
     };
   },

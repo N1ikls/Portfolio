@@ -1,10 +1,11 @@
 export default {
     state: {
-        searchValue: "",
+        searchValue_smile: "",
         smile: [],
         local: JSON.parse(localStorage.getItem("local") || "[] "), //
     },
     mutations: {
+        
         SET_SMILE_TO_STATE: (state, smile) => {
             state.smile = smile;
         },
@@ -14,12 +15,12 @@ export default {
             localStorage.setItem("local", JSON.stringify(state.local)); // сохраняем
         },
 
-        DEL: (state) => {
+        DELETE_LOCALSTORAGE: (state) => {
             state.local = [];
         },
 
         SET_SEARCH_VALUE: (state, value) => {
-            state.searchValue = value;
+            state.searchValue_smile = value;
         },
 
     },
@@ -37,11 +38,11 @@ export default {
         },
 
         DELETE({ commit }) {
-            commit("DEL");
+            commit("DELETE_LOCALSTORAGE");
         },
 
-        GET_SEARCH_VALUE({ commit }, value) {
-            commit("SET_SEARCH_VALUE", value);
+        GET_SEARCH_VALUE_SMILE({ commit }, value) {
+            commit("SET_SEARCH_VALUE_SMILE", value);
         },
 
     },
@@ -57,8 +58,8 @@ export default {
             return state.smile;
         },
 
-        searchValue(state) {
-            return state.searchValue;
+        searchValue_smile(state) {
+            return state.searchValue_smile;
         },
     }
 }

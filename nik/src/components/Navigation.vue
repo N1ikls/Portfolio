@@ -21,16 +21,16 @@
 
         <v-list dense rounded>
           <v-list-item v-for="item in items" :key="item.title" link>
-            
             <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-icon>
             <Menu :boolean="item.bool"></Menu>
             <v-list-item-content>
-             
-              <v-list-item-title @click.prevent ="$router.push(item.path).catch(()=>{})">{{ item.title }}</v-list-item-title>
+              <v-list-item-title
+                @click.prevent="$router.push(item.path).catch(() => {})"
+                >{{ item.title }}</v-list-item-title
+              >
             </v-list-item-content>
-             
           </v-list-item>
         </v-list>
       </v-navigation-drawer>
@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import Menu from "./Menu.vue";
+import Menu from "./My-projects/Menu.vue";
 export default {
   name: "Navigation",
   components: {
@@ -49,7 +49,7 @@ export default {
     return {
       drawer: null,
       items: [
-        { title: "Home", icon: "mdi-view-dashboard", path: '/'},
+        { title: "Home", icon: "mdi-view-dashboard", path: "/" },
         { title: "About", icon: "mdi-forum" },
         { title: "My projects", icon: "mdi-folder", bool: true },
       ],
@@ -60,8 +60,4 @@ export default {
   methods: {},
 };
 </script>
-<style scoped>
-body {
-  font-weight: 400;
-}
-</style>
+<style scoped></style>

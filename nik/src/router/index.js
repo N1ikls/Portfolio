@@ -1,7 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Header from "../views/Header.vue";
-import Table from "../views/Smile/Table.vue";
+import Smile__table from "../views/Smile/Smile__table.vue";
+import Disfood__main from "../views/Disfood/Disfood__main.vue";
 Vue.use(VueRouter);
 
 const routes = [{
@@ -10,8 +11,13 @@ const routes = [{
     },
     {
         path: "/My_project_1",
-        component: Table,
+        component: Smile__table,
     },
+    {
+        path: "/My_project_2",
+        component: Disfood__main,
+    },
+
 
 
 
