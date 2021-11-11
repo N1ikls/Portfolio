@@ -53,9 +53,27 @@
     </div>
     <div class="header__bottom">
       <div class="container">
-        
         <div class="header__row">
           <h3>PORTEN</h3>
+          <nav class="menu">
+            <ul class="menu__items">
+              <li class="menu__link" v-for="(i, index) in menu" :key="index">
+                {{ i.title }}
+              </li>
+              <img
+                class="menu__link _icon"
+                src="~@/assets/shop.svg"
+                alt="shop"
+                srcset=""
+              />
+              <img
+                class="menu__link _icon"
+                src="~@/assets/search.svg"
+                alt="search"
+                srcset=""
+              />
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
@@ -79,6 +97,17 @@ export default {
           title: "9:00 — 18:00",
         },
       ],
+      menu: [
+        {
+          title: "Понравилось",
+        },
+        {
+          title: "личный кабинет",
+        },
+        {
+          title: "настройки",
+        },
+      ],
     };
   },
   methods: {},
@@ -87,4 +116,5 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/Patheon_scss/styles.scss";
+@import "@/assets/Patheon_scss/head.scss";
 </style>

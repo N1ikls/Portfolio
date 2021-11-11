@@ -1,0 +1,105 @@
+
+.header__row {
+  display: flex;
+  color: #969696;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 14px;
+}
+.header__top {
+  width: 100%;
+  min-height: 44px;
+  background: #000000;
+  display: flex;
+  align-items: center;
+}
+
+.header__items {
+  display: flex;
+  align-items: center;
+  color: gray;
+  li {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+.header__text {
+  padding: 5px;
+}
+@media (max-width:416px) {
+  .header__row {
+    flex-direction: column;
+  }
+  .header__items {
+    flex-direction: column;
+  }
+  .header__text:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  
+}
+
+.header__text__border {
+  border-right: 1px solid;
+}
+.header__sing {
+  display: flex;
+  align-items: center;
+}
+.sing__text:not(:last-child) {
+  margin-right: 7px;
+}
+.header__bottom {
+  background: #0f0f0f;
+  width: 100%;
+  min-height: 80px;
+}
+.header__bottom {
+  display: flex;
+  align-items: center;
+}
+.header__row {
+  h3 {
+    font-family: Post No Bills Jaffna;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 54px;
+
+    color: #ffffff;
+  }
+}
+.menu {
+  display: flex;
+}
+.menu__items {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  
+}
+.menu__link {
+  padding: 5px;
+}
+.menu__link:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.menu__link:not(:last-child) {
+  margin-right: 38px;
+}
+.sing__text:hover {
+  cursor: pointer;
+}
+.sing__text {
+  padding: 5px;
+}
+@media (max-width:635px) {
+  .menu__items {
+    flex-wrap: wrap;
+  }
+  
+}
