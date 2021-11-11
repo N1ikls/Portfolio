@@ -33,8 +33,8 @@ export default {
       item: [
         { title: "1", routing: "/My_project_1" },
         { title: "2", routing: "/My_project_2"  },
-        { title: "3", routing: "/My_project_1"  },
-        { title: "4", routing: "/My_project_1"  },
+        { title: "3", routing: "/My_project_3"  },
+        { title: "4", routing: "/My_project_4"  },
       ],
     };
   },
