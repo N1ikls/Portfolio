@@ -1,5 +1,5 @@
 <template>
-  <div class = "wrapper">
+  <div class="wrapper">
     <Head></Head>
     <Main></Main>
     <Footer></Footer>
@@ -15,16 +15,16 @@ export default {
   components: {
     Head,
     Main,
-    Footer
+    Footer,
   },
 };
 </script>
 
 <style lang="scss" scoped>
-  .wrapper {
-    min-height: 100%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
 </style>

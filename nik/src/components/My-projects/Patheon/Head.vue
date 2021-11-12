@@ -62,13 +62,13 @@
               </li>
               <img
                 class="menu__link _icon"
-                src="~@/assets/shop.svg"
+                src="~@/assets/Patheon__images/shop.svg"
                 alt="shop"
                 srcset=""
               />
               <img
                 class="menu__link _icon"
-                src="~@/assets/search.svg"
+                src="~@/assets/Patheon__images/search.svg"
                 alt="search"
                 srcset=""
               />
