@@ -9,7 +9,7 @@
 <script>
 import Head from "@/components/My-projects/Patheon/Head.vue";
 import Main from "@/components/My-projects/Patheon/Main.vue";
-import Footer from "@/components/My-projects/Patheon/Footer.vue";
+import Footer from "@/components/My-projects/Patheon/Footer/Footer.vue";
 export default {
   name: "Patheon__main",
   components: {
