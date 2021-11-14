@@ -40,6 +40,7 @@
 }
 .main {
   flex: 1 1 auto;
+  padding: 0 0 0 0 !important;
 }
 .body__column {
   display: flex;
@@ -346,6 +347,7 @@ margin-bottom: 50px;
 }
 .brands__column {
   flex: 0 1 25%;
+  
 }
 @media (max-width:510px) {
   .card__brands {

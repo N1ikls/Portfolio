@@ -4,6 +4,7 @@
     absolute
     offset-x
     rounded
+    
   >
     <template v-slot:activator="{ on, attrs }">
       <v-list-item-title v-bind="attrs" v-on="on">My project</v-list-item-title>

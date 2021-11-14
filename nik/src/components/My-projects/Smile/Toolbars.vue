@@ -1,6 +1,5 @@
 <template>
     <navigation> </navigation>
-  
 </template>
 
 <script>

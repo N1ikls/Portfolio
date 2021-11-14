@@ -12,3 +12,48 @@
 .v-footer {
   padding: 0 0 0 0;
 }
+.footer__bottom {
+  background: #0f0f0f;
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+}
+.bottom__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height */
+
+  /* light-gray */
+
+  color: #d0d0d0;
+  padding: 5px;
+}
+._bottom {
+  align-items: center;
+}
+.bottom__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bottom__author {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height */
+
+  /* light-gray */
+
+  color: #d0d0d0;
+  padding: 5px;
+}
+@media (max-width:510px) {
+  .footer__top {
+    padding: 0px;
+  }
+  
+}
