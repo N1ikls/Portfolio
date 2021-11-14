@@ -1,21 +1,18 @@
 <template>
   <div>
-    <navigation/>
-    <disfood__head />
-    <disfood__table />
+    <disfoodhead/>
+    <disfoodtable />
   </div>
 </template>
 
 <script>
-import Disfood__head from "../../components/My-projects/Disfood/Disfood__head.vue";
-import Disfood__table from "../../components/My-projects/Disfood/Disfood__table.vue";
-import Navigation from '../../components/Navigation.vue';
+import Disfoodhead from "../../components/My-projects/Disfood/Disfood__head.vue";
+import Disfoodtable from "../../components/My-projects/Disfood/Disfood__table.vue";
 export default {
   name: 'Disfood__main',
   components: {
-    Disfood__head,
-    Disfood__table,
-    Navigation,
+    Disfoodhead,
+    Disfoodtable,
   },
 };
 </script>

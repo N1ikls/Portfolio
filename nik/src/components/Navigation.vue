@@ -4,7 +4,7 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
     <v-sheet>
-      <v-navigation-drawer v-model="drawer" absolute temporary>
+      <v-navigation-drawer v-model="drawer" absolute temporary >
         <v-list-item>
           <v-list-item-avatar>
             <v-img src="../assets/icon__nik.jpg"></v-img>
@@ -24,7 +24,6 @@
             <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-icon>
-            <Menu :boolean="item.bool"></Menu>
             <v-list-item-content>
               <v-list-item-title
                 @click.prevent="$router.push(item.path).catch(() => {})"
