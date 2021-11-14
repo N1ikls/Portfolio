@@ -4,7 +4,7 @@
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
     <v-sheet>
-      <v-navigation-drawer v-model="drawer" absolute temporary >
+      <v-navigation-drawer v-model="drawer" absolute temporary>
         <v-list-item>
           <v-list-item-avatar>
             <v-img src="../assets/icon__nik.jpg"></v-img>

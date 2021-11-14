@@ -6,10 +6,8 @@ import Disfood__main from "../views/Disfood/Disfood__main.vue";
 import Patheon__main from "../views/Patheon/Patheon__main.vue";
 Vue.use(VueRouter);
 
-const routes = [{
-        path: "/",
-        component: Header,
-    },
+const routes = [
+   
     {
         path: "/My_project_1",
         component: Smile__table,
