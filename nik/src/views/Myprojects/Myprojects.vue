@@ -82,7 +82,7 @@ export default {
       {
         title: "Klerk tree",
         path: "My_project_4",
-        text: "ТЗ на вакансию frontend vue, репозиторий с самим заданием: ",
+        text: "Sorry, но этот проект на github не работает изза файла json (. ТЗ на вакансию frontend vue, репозиторий с самим заданием: ",
         icon: "mdi-gitlab",
       },
     ],
