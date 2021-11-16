@@ -3,7 +3,7 @@
     <navigation />
     <v-card color="basil">
       <v-card-title class="text-center justify-center py-6">
-        <h1 class="font-weight-bold text-h2 basil--text">My projects</h1>
+        <h1 class="text-h2 basil--text">My projects</h1>
       </v-card-title>
       <v-tabs v-model="tab" background-color="transparent" color="basil" grow>
         <v-tab
@@ -98,6 +98,9 @@ export default {
 </script>
 
 <style>
+h1 {
+  font-family: 'Montserrat', sans-serif;
+}
 .basil--text {
   color: grey !important;
   font-family: "Montserrat", sans-serif;
