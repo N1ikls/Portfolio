@@ -28,8 +28,11 @@
                 icon
                 :href="UrlCardText(item.title)"
               >
-                <v-icon size="24px">
+                <v-icon size="24px" v-if="item.icon != 'mdi-gitlab'">
                   {{ icon }}
+                </v-icon>
+                <v-icon size="24px" v-if="item.icon == 'mdi-gitlab'">
+                  mdi-gitlab
                 </v-icon>
               </v-btn>
               <v-btn
@@ -76,21 +79,28 @@ export default {
         text: "Макет figma: ",
         bool: true,
       },
+      {
+        title: "Klerk tree",
+        path: "My_project_4",
+        text: "Макет figma: ",
+        icon: "mdi-gitlab",
+      },
     ],
   }),
   methods: {
     UrlCardText(title) {
       let smile = "https://github.com/N1ikls/vue_project_3";
       let disfood = "https://github.com/N1ikls/Disfood_2";
-      let Html_css_adaptive = "";
+
       if (title == "Smile") {
         return smile;
       }
       if (title == "Disfood") {
         return disfood;
       }
-      if (title == "Html css adaptive") {
-        return Html_css_adaptive;
+
+      if (title == "Klerk tree") {
+        return "https://gitlab.com/Nikolay_play/vue_project_2/-/tree/master";
       }
     },
   },
@@ -99,7 +109,7 @@ export default {
 
 <style>
 h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .basil--text {
   color: grey !important;

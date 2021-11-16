@@ -1,8 +1,13 @@
 <template>
   <div class="header">
-    <v-app-bar  dense outlined>
+    <v-app-bar dense outlined>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-spacer></v-spacer>
+      <v-btn @click="$vuetify.theme.dark = !$vuetify.theme.dark" icon>
+        <v-icon>mdi-theme-light-dark</v-icon>
+      </v-btn>
     </v-app-bar>
+
     <v-sheet>
       <v-navigation-drawer v-model="drawer" absolute temporary>
         <v-list-item>

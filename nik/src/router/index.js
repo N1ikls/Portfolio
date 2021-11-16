@@ -4,6 +4,7 @@ import Header from "../views/Header.vue";
 import Smile__table from "../views/Smile/Smile__table.vue";
 import Disfood__main from "../views/Disfood/Disfood__main.vue";
 import Patheon__main from "../views/Patheon/Patheon__main.vue";
+import Klerk__main from "../views/Klerk/Klerk__main.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -20,7 +21,10 @@ const routes = [
         path: "/My_project_3",
         component: Patheon__main,
     },
-
+    {
+        path: "/My_project_4",
+        component: Klerk__main,
+    },
 
 
 
