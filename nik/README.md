@@ -1,4 +1,4 @@
-# nik
+# Nik
 
 ## Project setup
 ```
