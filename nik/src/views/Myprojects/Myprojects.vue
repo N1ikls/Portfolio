@@ -82,7 +82,7 @@ export default {
       {
         title: "Klerk tree",
         path: "My_project_4",
-        text: "Макет figma: ",
+        text: "ТЗ на вакансию frontend vue, репозиторий с самим заданием: ",
         icon: "mdi-gitlab",
       },
     ],
