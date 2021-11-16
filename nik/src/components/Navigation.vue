@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <v-app-bar app dense outlined>
+    <v-app-bar  dense outlined>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
     </v-app-bar>
     <v-sheet>
