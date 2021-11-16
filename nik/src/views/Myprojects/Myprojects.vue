@@ -14,10 +14,34 @@
           {{ item.title }}
         </v-tab>
       </v-tabs>
+
       <v-tabs-items v-model="tab">
         <v-tab-item v-for="(item, index) in items" :key="index">
           <v-card color="basil" flat>
-            <v-card-text>{{ text }}</v-card-text>
+            <v-card-text
+              >{{ item.text }}
+              <v-btn
+                color="secondary"
+                v-for="icon in icons"
+                :key="icon"
+                class="mx-2 white--text"
+                icon
+                :href="UrlCardText(item.title)"
+              >
+                <v-icon size="24px">
+                  {{ icon }}
+                </v-icon>
+              </v-btn>
+              <v-btn
+                v-if="item.bool == true"
+                color="secondary"
+                class="mx-2 white--text"
+                icon
+                href="https://www.figma.com/file/xHjAxd90oUnfpTQ5NZnSoz/Templates-%2317.-More-on-Figma.info?node-id=0%3A1"
+              >
+                <v-icon size="24px"> mdi-eye </v-icon>
+              </v-btn>
+            </v-card-text>
           </v-card>
         </v-tab-item>
       </v-tabs-items>
@@ -34,13 +58,42 @@ export default {
   data: () => ({
     //
     tab: null,
+    icons: ["mdi-github"],
     items: [
-      { title: "Smile", path: "My_project_1" },
-      { title: "Disfood", path: "My_project_2" },
-      { title: "Html css adaptive", path: "My_project_3" },
+      {
+        title: "Smile",
+        path: "My_project_1",
+        text: "ТЗ на вакансию frontend vue, репозиторий с самим заданием: ",
+      },
+      {
+        title: "Disfood",
+        path: "My_project_2",
+        text: "Делал по макету figma на vue:",
+      },
+      {
+        title: "Html css adaptive",
+        path: "My_project_3",
+        text: "Макет figma: ",
+        bool: true,
+      },
     ],
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   }),
+  methods: {
+    UrlCardText(title) {
+      let smile = "https://github.com/N1ikls/vue_project_3";
+      let disfood = "https://github.com/N1ikls/Disfood_2";
+      let Html_css_adaptive = "";
+      if (title == "Smile") {
+        return smile;
+      }
+      if (title == "Disfood") {
+        return disfood;
+      }
+      if (title == "Html css adaptive") {
+        return Html_css_adaptive;
+      }
+    },
+  },
 };
 </script>
 

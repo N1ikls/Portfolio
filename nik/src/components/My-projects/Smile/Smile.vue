@@ -1,6 +1,6 @@
 <template>
  
-  <v-card>
+  <v-card height = "100%">
    
       <v-card-title>
         <v-btn style="margin-top: 16px" @click="Del">Clear LocalStorage</v-btn>
