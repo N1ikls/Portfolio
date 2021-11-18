@@ -87,17 +87,19 @@ export default {
       },
     ],
   }),
-  mounted() {},
+  mounted() {
+    this.homerouting;
+  },
   computed: {
-    nav: {
+    drawer: {
       get() {
         return this.$store.state.drawer;
       },
       set() {},
     },
     homerouting() {
-      if (this.nav == true) {
-        return $router.push("/My_project_1");
+      if (this.drawer == true) {
+        return this.$router.push("/My_project_1");
       }
     },
   },

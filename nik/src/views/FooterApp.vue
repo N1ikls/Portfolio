@@ -2,25 +2,20 @@
   <v-footer dark padless>
     <v-card class="indigo lighten-1 white--text text-center" flat tile>
       <v-card-text>
-        <v-tooltip bottom>
+        <v-tooltip bottom v-for="(icon, index) in icons" :key="index">
           <template v-slot:activator="{ on, attrs }">
-            <v-btn class="mx-4 white--text" icon v-bind="attrs" v-on="on">
-              <v-icon size="24px"> mdi-discord </v-icon>
+            <v-btn
+              class="mx-4 white--text"
+              icon
+              v-bind="attrs"
+              v-on="on"
+              :href="Url(icon)"
+            >
+              <v-icon size="24px">{{ icon }}</v-icon>
             </v-btn>
           </template>
-          <span>Nik211#1096</span>
+          <span>{{Toolip(index) }}</span>
         </v-tooltip>
-        <v-btn
-          v-for="icon in icons"
-          :key="icon"
-          class="mx-4 white--text"
-          icon
-          :href="Url(icon)"
-        >
-          <v-icon size="24px">
-            {{ icon }}
-          </v-icon>
-        </v-btn>
       </v-card-text>
 
       <v-card-text class="white--text pt-0"
@@ -39,8 +34,10 @@
 <script>
 export default {
   data: () => ({
-    icons: ["mdi-github", "mdi-account-circle"],
+    icons: ["mdi-discord ", "mdi-github", "mdi-account-circle"],
+    toolip: ["Nik211#1096", "Github author", "Vk"],
   }),
+  computed: {},
   methods: {
     Url(name) {
       if (name == "mdi-github") {
@@ -50,11 +47,19 @@ export default {
         return "https://vk.com/id505833989";
       }
     },
+    Toolip(index) {
+      let a = this.toolip;
+      let mas = [];
+      for (let i in a) {
+        mas.push(a[i]);
+      }
+      return mas[index];
+    },
   },
 };
 </script>
 
-<style >
+<style>
 .v-footer {
   display: block !important;
 }
