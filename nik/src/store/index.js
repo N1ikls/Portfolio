@@ -13,6 +13,9 @@ export default new Vuex.Store({
     toggleDrawer(state) {
       state.drawer = !state.drawer;
     },
+    EditHome(state) {
+      state.drawer = false;
+    },
   },
   actions: {},
   modules: {

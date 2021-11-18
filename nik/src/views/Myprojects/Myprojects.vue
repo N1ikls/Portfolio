@@ -99,7 +99,7 @@ export default {
     },
     homerouting() {
       if (this.drawer == true) {
-        return this.$router.push("/My_project_1");
+        return this.$router.push("/My_project_1").catch(() => {});
       }
     },
   },

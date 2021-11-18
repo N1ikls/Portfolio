@@ -25,7 +25,12 @@
         <v-divider></v-divider>
 
         <v-list dense rounded>
-          <v-list-item v-for="item in items" :key="item.title" link>
+          <v-list-item
+            v-for="item in items"
+            :key="item.title"
+            link
+            @click="item.click"
+          >
             <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-icon>
@@ -61,19 +66,33 @@ export default {
     return {
       drawer: null,
       items: [
-        { title: "Home", icon: "mdi-view-dashboard", path: "/" },
-        { title: "About", icon: "mdi-forum" },
-       
+        {
+          title: "Home",
+          icon: "mdi-view-dashboard",
+          path: "/",
+          click: this.EditHome,
+        },
+        { title: "About", icon: "mdi-forum", click: this.EditHome },
       ],
     };
   },
   mounted() {},
-  
+
   methods: {
     toggleDrawer() {
       this.$store.commit("toggleDrawer");
     },
-   
+    EditHome() {
+      this.$store.commit("EditHome");
+    },
+  },
+  computed: {
+    nav: {
+      get() {
+        return this.$store.state.drawer;
+      },
+      set() {},
+    },
   },
 };
 </script>

@@ -13,20 +13,21 @@
 <script>
 import myprojects from "./views/Myprojects/Myprojects.vue";
 import footerapp from "./views/FooterApp.vue";
-import Navigation from './views/Header.vue'
+import Navigation from "./views/Header.vue";
 export default {
   name: "App",
   components: {
     myprojects,
     footerapp,
-    Navigation
+    Navigation,
   },
-  data () {
-    return {
-      
-    }
+  data() {
+    return {};
+  },
+  mounted() {
   },
   computed: {
+ 
     drawer: {
       get() {
         return this.$store.state.drawer;
