@@ -82,11 +82,25 @@ export default {
       {
         title: "Klerk tree",
         path: "My_project_4",
-        text: "Sorry, но этот проект на github не работает изза файла json (. ТЗ на вакансию frontend vue, репозиторий с самим заданием: ",
+        text: "Sorry, но этот проект на github  не работает изза файла json (. ТЗ на вакансию frontend vue, репозиторий с самим заданием: ",
         icon: "mdi-gitlab",
       },
     ],
   }),
+  mounted() {},
+  computed: {
+    nav: {
+      get() {
+        return this.$store.state.drawer;
+      },
+      set() {},
+    },
+    homerouting() {
+      if (this.nav == true) {
+        return $router.push("/My_project_1");
+      }
+    },
+  },
   methods: {
     UrlCardText(title) {
       let smile = "https://github.com/N1ikls/vue_project_3";

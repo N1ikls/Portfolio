@@ -1,27 +1,39 @@
 <template>
   <v-app>
-    <myprojects />
+    <myprojects v-if="drawer" />
+    <navigation v-if="!drawer" />
     <v-main>
       <v-card>
         <router-view />
       </v-card>
     </v-main>
-    
     <footerapp />
   </v-app>
 </template>
 <script>
 import myprojects from "./views/Myprojects/Myprojects.vue";
 import footerapp from "./views/FooterApp.vue";
+import Navigation from './views/Header.vue'
 export default {
   name: "App",
   components: {
     myprojects,
     footerapp,
+    Navigation
   },
-  data: () => ({
-    //
-  }),
+  data () {
+    return {
+      
+    }
+  },
+  computed: {
+    drawer: {
+      get() {
+        return this.$store.state.drawer;
+      },
+      set() {},
+    },
+  },
 };
 </script>
 <style>

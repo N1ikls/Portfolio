@@ -36,6 +36,14 @@
               >
             </v-list-item-content>
           </v-list-item>
+          <v-list-item link @click="toggleDrawer">
+            <v-list-item-icon>
+              <v-icon>mdi-folder</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title> My projects </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
         </v-list>
       </v-navigation-drawer>
     </v-sheet>
@@ -55,13 +63,18 @@ export default {
       items: [
         { title: "Home", icon: "mdi-view-dashboard", path: "/" },
         { title: "About", icon: "mdi-forum" },
-        { title: "My projects", icon: "mdi-folder", bool: true },
+       
       ],
     };
   },
   mounted() {},
-  computed: {},
-  methods: {},
+  
+  methods: {
+    toggleDrawer() {
+      this.$store.commit("toggleDrawer");
+    },
+   
+  },
 };
 </script>
 <style scoped></style>
