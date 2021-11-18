@@ -1,11 +1,11 @@
 <template>
   <v-app>
+    <!--костыль для кнопок home and My projects-->
     <myprojects v-if="drawer" />
     <navigation v-if="!drawer" />
+    <!------------>
     <v-main>
-      <v-card>
-        <router-view />
-      </v-card>
+      <router-view />
     </v-main>
     <footerapp />
   </v-app>
@@ -25,15 +25,18 @@ export default {
     return {};
   },
   mounted() {
+   
   },
   computed: {
- 
     drawer: {
       get() {
         return this.$store.state.drawer;
       },
       set() {},
     },
+  },
+  methods: {
+    
   },
 };
 </script>

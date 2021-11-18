@@ -17,7 +17,7 @@
 
       <v-tabs-items v-model="tab">
         <v-tab-item v-for="(item, index) in items" :key="index">
-          <v-card color="basil" flat>
+          <v-card color="basil" elevation="24" outlined flat>
             <v-card-text
               >{{ item.text }}
               <v-btn

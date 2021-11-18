@@ -29,7 +29,7 @@
             v-for="item in items"
             :key="item.title"
             link
-            @click="item.click"
+            @click="EditHome"
           >
             <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>
@@ -93,6 +93,11 @@ export default {
       },
       set() {},
     },
+    // homerouter() {
+    //   if (this.nav == true && this.$router.history.current.path == "/") {
+    //     this.nav = false;
+    //   }
+    // },
   },
 };
 </script>
