@@ -85,6 +85,12 @@ export default {
         text: "Sorry, но этот проект на github  не работает изза файла json (. ТЗ на вакансию frontend vue, репозиторий с самим заданием: ",
         icon: "mdi-gitlab",
       },
+      {
+        title: "OJJO",
+        path: "My_project_5",
+        text: " dsaas",
+        icon: " ",
+      },
     ],
   }),
   mounted() {

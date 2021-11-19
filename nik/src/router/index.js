@@ -7,6 +7,7 @@ import Patheon__main from "../views/Patheon/Patheon__main.vue";
 import Klerk__main from "../views/Klerk/Klerk__main.vue";
 import myprojects from "../views/Myprojects/Myprojects.vue";
 import Home from "../components/My-projects/Home.vue";
+import Ojjo__main from "../views/Ojjo/Ojjo__main.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -30,6 +31,10 @@ const routes = [
   {
     path: "/My_project_4",
     component: Klerk__main,
+  },
+  {
+    path: "/My_project_5",
+    component: Ojjo__main,
   },
 ];
 

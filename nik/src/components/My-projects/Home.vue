@@ -4,16 +4,16 @@
       <v-col align="center">
         <v-img
           src="~@/assets/icon__nik.jpg"
-          width="100"
-          height="100"
-          style="border-radius: 50%"
+          width="150"
+          height="150"
+          style="border-radius:50%"
         ></v-img>
         <h1 class="text-center m-2 h1">Hello,I'm Nikolay</h1>
         <h3 class="text-center m-2 h3">I am a beginner frontend developer</h3>
       </v-col>
     </v-row>
     <div class="pa-4">
-      <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
+      <v-timeline :dense="$vuetify.breakpoint.smAndDown">
         <v-timeline-item
           v-for="(item, i) in items"
           :key="i"
@@ -55,20 +55,17 @@ export default {
         text: "Все началось с того, что на 3 курсе sportmaster набирал людей на курс frontend разработки, fronted vue + oracle, и я решил записаться на этот курс и попасть к ним в команду",
         color: "teal darken-2",
         icon: "mdi-airballoon",
-        bool:true,
+        bool: true,
       },
       {
         title: "Что делаю сейчас",
-        text:"На данный момент учусь на 4 курсе, и параллельно ищу работу своей мечты, где я полностью смогу проявить свой потенциал, а также достигнуть уровня Senior разработчика",
-        color: "indigo",
-        icon: "mdi-buffer",
+        text: "На данный момент учусь на 4 курсе, и параллельно ищу работу своей мечты, где я полностью смогу проявить свой потенциал, а также достигнуть уровня Senior разработчика",
+        color: "deep-purple darken-4",
+        icon: "mdi-vuejs",
       },
     ],
-    
   }),
-  methods: {
-    
-  }
+  methods: {},
 };
 </script>
 
