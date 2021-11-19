@@ -29,16 +29,14 @@
             v-for="item in items"
             :key="item.title"
             link
+            @click.prevent="$router.push(item.path).catch(() => {})"
             @click="EditHome"
           >
             <v-list-item-icon>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-icon>
             <v-list-item-content>
-              <v-list-item-title
-                @click.prevent="$router.push(item.path).catch(() => {})"
-                >{{ item.title }}</v-list-item-title
-              >
+              <v-list-item-title>{{ item.title }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list-item link @click="toggleDrawer">
@@ -70,9 +68,8 @@ export default {
           title: "Home",
           icon: "mdi-view-dashboard",
           path: "/",
-          click: this.EditHome,
         },
-        { title: "About", icon: "mdi-forum", click: this.EditHome },
+        { title: "About", icon: "mdi-forum" },
       ],
     };
   },
@@ -82,9 +79,11 @@ export default {
     toggleDrawer() {
       this.$store.commit("toggleDrawer");
     },
+    //----Костыль---//
     EditHome() {
       this.$store.commit("EditHome");
     },
+    //-------------//
   },
   computed: {
     nav: {
@@ -93,11 +92,6 @@ export default {
       },
       set() {},
     },
-    // homerouter() {
-    //   if (this.nav == true && this.$router.history.current.path == "/") {
-    //     this.nav = false;
-    //   }
-    // },
   },
 };
 </script>

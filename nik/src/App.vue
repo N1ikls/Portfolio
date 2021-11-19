@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <!--костыль для кнопок home and My projects-->
+    <!--router для кнопок home and My projects-->
     <myprojects v-if="drawer" />
     <navigation v-if="!drawer" />
     <!------------>
