@@ -44,6 +44,15 @@
               >
                 <v-icon size="24px"> mdi-eye </v-icon>
               </v-btn>
+              <v-btn
+                v-if="item.bool_ojjo"
+                color="secondary"
+                class="mx-2 white--text"
+                icon
+                href="https://www.figma.com/file/gYAEcIy0N9RaE0L5rsxlR8/Templates-%2316.-More-on-Figma.info?node-id=0%3A1"
+              >
+                <v-icon size="24px"> mdi-eye </v-icon>
+              </v-btn>
             </v-card-text>
           </v-card>
         </v-tab-item>
@@ -88,8 +97,8 @@ export default {
       {
         title: "OJJO",
         path: "My_project_5",
-        text: " dsaas",
-        icon: " ",
+        text: " Много страничный сайт делаю по макету figma: ",
+        bool_ojjo: true,
       },
     ],
   }),
@@ -123,6 +132,9 @@ export default {
 
       if (title == "Klerk tree") {
         return "https://gitlab.com/Nikolay_play/vue_project_2/-/tree/master";
+      }
+      if (title == "OJJO") {
+        return "";
       }
     },
   },
