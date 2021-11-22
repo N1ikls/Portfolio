@@ -104,7 +104,7 @@ export default {
   width: 27px !important;
   height: 4.17px !important;
   border-radius: 20px;
-  background: #ffffff;
+  background: #ffffff !important;
 }
 .bm-burger-button {
   right: 7% !important;
