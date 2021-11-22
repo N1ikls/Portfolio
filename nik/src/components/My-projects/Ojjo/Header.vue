@@ -30,10 +30,17 @@
           </div>
         </ul>
       </v-container>
-      <div class="header__content">
+      <div class="header__content-logo">
         <div class="header-logo" v-if="this.burger">
-          <img src="~@/assets/OJJO/images/logo.png" alt="" srcset="" />
+          <img
+            src="~@/assets/OJJO/images/logo.png"
+            style="display: block"
+            alt=""
+            srcset=""
+          />
         </div>
+      </div>
+      <div class="header__content">
         <div class="header__title">Долго, дорого, богато!</div>
         <div class="catalog__button">
           <div class="header__catalog">каталог изделий</div>

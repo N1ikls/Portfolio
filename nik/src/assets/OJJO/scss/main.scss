@@ -1,0 +1,267 @@
+.main__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content__title {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+
+  /* or 29px */
+  margin-bottom: 20px;
+  text-align: center;
+
+  /* accent */
+
+  color: #333333;
+}
+.content__text {
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 41px;
+  /* identical to box height */
+
+  text-align: center;
+
+  /* accent */
+
+  color: #333333;
+  margin-bottom: 60px;
+}
+.content__items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.content__link {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  /* accent */
+
+  color: #333333;
+  padding: 16px 0 16px 0;
+  border: 1px solid #d6d6d6;
+  min-width: 165px;
+}
+.main__items {
+  display: flex;
+}
+
+.content__card {
+  padding: 70px;
+}
+.content__link:nth-child(1) {
+  color: #ffffff;
+  background: #333333;
+}
+
+.card__row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.title-images {
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  /* white */
+
+  color: #ffffff;
+}
+.images {
+  position: relative;
+  display: inline-block;
+  padding: 10px 0 10px 0;
+}
+
+@media (max-width: 991px) {
+  .card__row {
+    justify-content: center;
+  }
+}
+@media (max-width: 493px) {
+  .content__items {
+    justify-content: center;
+  }
+}
+@media (max-width: 366px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .content__card {
+    padding: 30px;
+  }
+}
+.main__shop {
+  padding: 100px;
+  background: url("~@/assets/OJJO/images/salon_body.svg") center no-repeat;
+  background-size: cover;
+}
+.shop__column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.shop__title {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 140%;
+  /* or 29px */
+
+  text-align: center;
+
+  /* white */
+
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+._title {
+  font-family: Noto Serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 41px;
+  /* identical to box height */
+
+  text-align: center;
+
+  /* white */
+
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+.shop__text {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 140%;
+  /* or 25px */
+  max-width: 730px;
+  text-align: center;
+
+  /* white */
+
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+.shop__button {
+  padding: 10px 30px 10px 30px;
+  border: 1px solid #333333;
+  background: #ffffff;
+}
+.button {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  /* accent */
+
+  color: #333333;
+}
+/*--------------------------------------------------------------------------------------------*/
+.article__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.article__images {
+  position: relative;
+  display: inline-block;
+  padding: 10px 0 10px 0;
+}
+.article__title-images {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 140%;
+  /* or 29px */
+
+  text-align: center;
+
+  /* white */
+
+  color: #ffffff;
+}
+.card__article {
+  padding: 100px;
+}
+@media (max-width: 992px) {
+  .article__row {
+    justify-content: center;
+  }
+}
+.article__title {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 21px;
+  line-height: 140%;
+  /* or 29px */
+
+  text-align: center;
+
+  /* accent */
+
+  color: #333333;
+}
+.article-title {
+  font-weight: 600;
+  font-size: 30px;
+  margin: 30px 0 40px 0;
+}
+@media (max-width: 366px) {
+  .card__article {
+    padding: 30px;
+  }
+  .article__title-images {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1280px) {
+  .article__images:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 991px) {
+  .article__images:not(:last-child) {
+    margin-right: 0;
+  }
+}

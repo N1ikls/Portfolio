@@ -100,10 +100,10 @@ body {
   /* identical to box height */
 
   text-align: center;
-
   color: #ffffff;
 
   padding: 20px;
+  margin-top: 330px;
 }
 .header__catalog {
   font-family: Gilroy;
@@ -125,15 +125,14 @@ body {
   text-align: center;
 }
 .catalog__button {
-  margin-top: 35px;
   padding: 20px;
 }
 .header__content {
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: center;
 }
 .header__bottom {
   border-top: 1px solid #ffffff;
@@ -147,10 +146,23 @@ body {
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
 
 .bm-burger-bars {
-  background: #FFFFFF;
+  background: #ffffff;
 }
 .bm-burger-bars.line-style {
   height: 4.17px;
   border-radius: 20px;
   width: 33.33px;
+}
+
+.header-logo {
+  margin: 0 auto;
+}
+.header__content-logo {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 427px) {
+  .header__content-logo {
+    margin-right: 50px;
+  }
 }
