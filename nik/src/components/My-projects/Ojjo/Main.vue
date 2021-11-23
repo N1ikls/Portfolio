@@ -85,6 +85,59 @@
               <img src="~@/assets/OJJO/images/article_3.svg" alt="" srcset="" />
             </div>
           </div>
+
+          <div class="article__button">
+            <div class="article-button">читать наш блог</div>
+          </div>
+
+          <div class="article__air">
+            <div class="air__telegram">#ojjo_jewerly</div>
+            <div class="air__title">Мы в социальных сетях</div>
+            <div class="air__row">
+              <div class="air__images" v-if="imgdel">
+                <img
+                  class="air-img"
+                  src="~@/assets/OJJO/images/air_1.svg"
+                  alt=""
+                />
+              </div>
+              <div class="air__images">
+                <img
+                  class="air-img"
+                  src="~@/assets/OJJO/images/air_2.svg"
+                  alt=""
+                />
+              </div>
+              <div class="air__images">
+                <img
+                  class="air-img"
+                  src="~@/assets/OJJO/images/air_3.svg"
+                  alt=""
+                />
+              </div>
+              <div class="air__images">
+                <img
+                  class="air-img"
+                  src="~@/assets/OJJO/images/air_4.svg"
+                  alt=""
+                />
+              </div>
+              <div class="air__images">
+                <img
+                  class="air-img"
+                  src="~@/assets/OJJO/images/air_5.svg"
+                  alt=""
+                />
+              </div>
+              <div class="air__images" v-if="imgdel">
+                <img
+                  class="air-img"
+                  src="~@/assets/OJJO/images/air_6.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </v-container>
     </v-card>
@@ -96,7 +149,26 @@ export default {
   data() {
     return {
       link: ["Свадьба", "МУЖУ", "жене", "партнеру", "коллекции", "редкость"],
+      imgdel: null,
     };
+  },
+  mounted() {
+    this.imgWidth();
+  },
+  methods: {
+    imgWidth() {
+      setInterval(() => {
+        let w = window.innerWidth;
+        if (w <= 778) {
+          this.imgdel = false;
+        } else {
+          this.imgdel = true;
+        }
+        if (w <= 366) {
+          this.imgdel = true;
+        }
+      }, 100);
+    },
   },
 };
 </script>
